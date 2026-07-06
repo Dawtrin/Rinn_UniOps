@@ -11,4 +11,5 @@ FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/club-management-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
+ENV JAVA_TOOL_OPTIONS="-Xmx300m"
 ENTRYPOINT ["java", "-jar", "app.jar"]
