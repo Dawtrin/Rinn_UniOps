@@ -1,0 +1,367 @@
+/* Login v4 — Premium Minimal Flagship (Meta-inspired) */
+
+.login-container-split {
+  min-height: 100vh;
+  display: flex;
+  background: var(--bg-canvas);
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Left Hero Showcase Column */
+.login-hero-side {
+  display: none; /* Hide on mobile/tablet */
+  position: relative;
+  padding: 80px 60px;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-right: 1px solid var(--border);
+  overflow: hidden;
+  color: #ffffff;
+}
+
+@media (min-width: 992px) {
+  .login-hero-side {
+    display: flex;
+    flex: 1.5;
+  }
+}
+
+.login-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(8, 8, 16, 0.65) 0%, rgba(8, 8, 16, 0.88) 100%);
+  z-index: 1;
+}
+
+
+.login-hero-glow-1 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.07) 0%, transparent 70%);
+  top: -150px;
+  left: -150px;
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.login-hero-glow-2 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, transparent 70%);
+  bottom: -200px;
+  right: -150px;
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.login-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  text-align: left;
+}
+
+.login-hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.login-hero-logo {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.25);
+}
+
+.login-hero-logo .logo-icon {
+  stroke-width: 2.5px;
+}
+
+.login-hero-brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--text-1);
+}
+
+.login-hero-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  color: var(--text-1);
+}
+
+.login-hero-title span {
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-hero-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-2);
+  margin-bottom: 40px;
+}
+
+.login-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: var(--glass-ultra);
+  border: 1px solid var(--border-glass-default);
+  color: var(--text-2);
+  backdrop-filter: blur(10px);
+}
+
+/* Right Form Column */
+.login-form-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 50%, var(--bg-surface) 0%, var(--bg-canvas) 100%);
+  padding: 40px 24px;
+  position: relative;
+  overflow-y: auto;
+}
+
+/* Form Card */
+.login-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 48px 44px;
+  width: min(440px, 100%);
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  z-index: 10;
+  transition: transform 0.3s var(--spring), box-shadow 0.3s ease;
+}
+
+.login-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 10%, rgba(255, 255, 255, 0.08) 50%, transparent 90%);
+  border-radius: 24px 24px 0 0;
+}
+
+/* Light Theme Card adjustments */
+body.light-theme .login-card {
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.02);
+}
+
+/* Header */
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-header h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-1);
+  letter-spacing: -0.02em;
+}
+
+/* Form layout */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-2);
+  letter-spacing: 0.01em;
+}
+
+.form-input {
+  background: var(--bg-inset);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 0.92rem;
+  color: var(--text-1);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+/* Password eye wrap */
+.login-pass-wrap {
+  position: relative;
+}
+
+.login-pass-wrap .form-input {
+  width: 100%;
+  padding-right: 44px;
+}
+
+.login-eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-3);
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  transition: color 0.15s ease;
+}
+
+.login-eye:hover {
+  color: var(--text-1);
+}
+
+/* Forgot password link */
+.login-forgot-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -6px;
+  margin-bottom: 16px;
+}
+
+.login-forgot-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent-light);
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.login-forgot-btn:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Action button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.login-btn:hover {
+  background: var(--accent-light);
+}
+
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Quick login options */
+.login-quick {
+  border-top: 1px solid var(--border);
+  margin-top: 28px;
+  padding-top: 24px;
+  text-align: center;
+}
+
+.login-quick-label {
+  font-size: 0.72rem;
+  color: var(--text-3);
+  margin-bottom: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.login-quick-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.login-quick-pill {
+  background: var(--bg-inset);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  padding: 7px 16px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+
+.login-quick-pill:hover {
+  background: var(--bg-hover);
+  color: var(--text-1);
+  transform: translateY(-1px);
+}
+
+.login-quick-pill.q-admin:hover {
+  border-color: var(--role-admin);
+  color: var(--role-admin);
+  background: rgba(192, 132, 252, 0.08);
+}
+
+.login-quick-pill.q-manager:hover {
+  border-color: var(--role-manager);
+  color: var(--role-manager);
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.login-quick-pill.q-member:hover {
+  border-color: var(--role-member);
+  color: var(--role-member);
+  background: rgba(52, 211, 153, 0.08);
+}
+

@@ -1,0 +1,10 @@
+{
+  "dayOfWeek": 2,
+  "startTime": "19:00",
+  "endTime": "21:00",
+  "title": "Tập nhảy mới",
+  "location": "Phòng tập A",
+  "type": "PRACTICE",
+  "color": "#6366f1",
+  "notes": "Lưu ý mang giầy"
+}

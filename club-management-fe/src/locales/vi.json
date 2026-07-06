@@ -1,0 +1,65 @@
+{
+  "sidebar": {
+    "sections": {
+      "overview": "TỔNG QUAN",
+      "hr": "NHÂN SỰ",
+      "events": "SỰ KIỆN",
+      "tasks": "CÔNG VIỆC",
+      "chat": "TRAO ĐỔI",
+      "system": "HỆ THỐNG",
+      "my_stuff": "CỦA TÔI",
+      "community": "CỘNG ĐỒNG",
+      "personal": "CÁ NHÂN"
+    },
+    "links": {
+      "dashboard": "Bảng điều khiển",
+      "overview": "Tổng quan",
+      "org_chart": "Sơ đồ tổ chức",
+      "org_chart_dept": "Sơ đồ ban",
+      "hr_assign": "Phân công đội",
+      "kpi": "Đánh giá KPI",
+      "kpi_self": "Tự đánh giá KPI",
+      "kpi_manager": "Chấm điểm KPI",
+      "leaderboard": "Bảng xếp hạng",
+      "schedule": "Thời khóa biểu",
+      "schedule_week": "Lịch tuần",
+      "events_list": "Lịch & Sự kiện",
+      "tasks_manage": "Quản lý công việc",
+      "tasks_mine": "Công việc",
+      "chat_messages": "Nhắn tin",
+      "ai_assistant": "Trợ lý AI",
+      "accounts": "Quản lý tài khoản",
+      "audit_logs": "Nhật ký hoạt động",
+      "payments": "Hội phí",
+      "payments_pay": "Đóng hội phí",
+      "recruitment": "Tuyển thành viên",
+      "finance": "Tài chính & Quỹ",
+      "inventory": "Kho thiết bị",
+      "resources": "Thư viện tài liệu",
+      "polls": "Biểu quyết nội bộ",
+      "profile": "Trang cá nhân",
+      "logout": "Đăng xuất"
+    },
+    "roles": {
+      "admin": "Chủ nhiệm CLB",
+      "manager": "Trưởng / Phó ban",
+      "member": "Thành viên"
+    }
+  },
+  "login": {
+    "title": "Đăng nhập hệ thống",
+    "email": "Địa chỉ Email",
+    "password": "Mật khẩu",
+    "btn_login": "Đăng nhập",
+    "forgot_pwd": "Quên mật khẩu?",
+    "back_to_login": "Quay lại đăng nhập",
+    "slogan_1": "Quản lý câu lạc bộ nghệ thuật",
+    "slogan_2": "Thông minh & Gắn kết sáng tạo",
+    "desc": "Chào mừng bạn đến với Rin_UniOps — Nền tảng chuyên nghiệp hàng đầu giúp tối ưu hóa hiệu suất thành viên, phân công công việc trực quan, và theo dõi đóng phí tự động."
+  },
+  "dashboard": {
+    "welcome": "Chào mừng quay trở lại",
+    "level": "Cấp độ",
+    "xp": "XP"
+  }
+}

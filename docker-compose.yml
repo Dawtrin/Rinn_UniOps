@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: club_mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password123
+      MYSQL_DATABASE: club_management
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  backend:
+    build:
+      context: ./club-management/club-management
+      dockerfile: Dockerfile
+    container_name: club_backend_api
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - JWT_SECRET=clubmanagement_super_secret_key_2025_change_this_in_production
+      - QR_SECRET=qr_attendance_separate_secret_key_2026_change_this_in_production_for_better_security
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./club-management-fe
+      dockerfile: Dockerfile
+    container_name: club_frontend_web
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:

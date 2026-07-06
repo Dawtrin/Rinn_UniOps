@@ -1,0 +1,65 @@
+{
+  "sidebar": {
+    "sections": {
+      "overview": "OVERVIEW",
+      "hr": "HR MANAGEMENT",
+      "events": "EVENTS",
+      "tasks": "TASKS",
+      "chat": "COMMUNICATION",
+      "system": "SYSTEM",
+      "my_stuff": "MY WORK",
+      "community": "COMMUNITY",
+      "personal": "PERSONAL"
+    },
+    "links": {
+      "dashboard": "Dashboard",
+      "overview": "Overview",
+      "org_chart": "Org Chart",
+      "org_chart_dept": "Department Chart",
+      "hr_assign": "Team Assignment",
+      "kpi": "KPI Evaluation",
+      "kpi_self": "Self Evaluation",
+      "kpi_manager": "Grade KPI",
+      "leaderboard": "Leaderboard",
+      "schedule": "Schedule",
+      "schedule_week": "Weekly Schedule",
+      "events_list": "Calendar & Events",
+      "tasks_manage": "Task Management",
+      "tasks_mine": "My Tasks",
+      "chat_messages": "Messages",
+      "ai_assistant": "AI Assistant",
+      "accounts": "User Accounts",
+      "audit_logs": "Activity Logs",
+      "payments": "Club Fees",
+      "payments_pay": "Pay Club Fees",
+      "recruitment": "Recruitment",
+      "finance": "Finance & Fund",
+      "inventory": "Inventory & Tools",
+      "resources": "Document Library",
+      "polls": "E-Voting & Polls",
+      "profile": "My Profile",
+      "logout": "Logout"
+    },
+    "roles": {
+      "admin": "Club President (Admin)",
+      "manager": "Team Lead (Manager)",
+      "member": "Club Member"
+    }
+  },
+  "login": {
+    "title": "Sign In to Club OS",
+    "email": "Email Address",
+    "password": "Password",
+    "btn_login": "Sign In",
+    "forgot_pwd": "Forgot password?",
+    "back_to_login": "Back to login",
+    "slogan_1": "Intelligent Art Club",
+    "slogan_2": "Management & Creative Operations",
+    "desc": "Welcome to Rin_UniOps — The leading professional platform designed to optimize member performance, assign tasks visually, and track membership fees automatically."
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "level": "Level",
+    "xp": "XP"
+  }
+}
