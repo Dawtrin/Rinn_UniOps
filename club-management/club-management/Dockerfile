@@ -11,5 +11,5 @@ FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/club-management-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
-ENV JAVA_TOOL_OPTIONS="-Xmx300m"
+ENV JAVA_TOOL_OPTIONS="-Xmx256m -Xms256m -XX:MaxMetaspaceSize=128m -Xss512k -Djava.security.egd=file:/dev/./urandom"
 ENTRYPOINT ["java", "-jar", "app.jar"]
